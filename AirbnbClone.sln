@@ -4,9 +4,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{423925DE
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5D9A2B28-6F1D-4CDB-9DEA-054F2DF9DEB3}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ui", "ui", "{B4F1FA02-FBF7-418C-A97F-755E0DFFB524}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "api", "api", "{C9A5B02A-7208-4024-8BEE-C11F9A0E584B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirbnbClone.API", "src\AirbnbClone.API\AirbnbClone.API.csproj", "{718369DB-DDA0-416D-8383-D82C7412AE57}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,7 +12,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{B4F1FA02-FBF7-418C-A97F-755E0DFFB524} = {5D9A2B28-6F1D-4CDB-9DEA-054F2DF9DEB3}
-		{C9A5B02A-7208-4024-8BEE-C11F9A0E584B} = {5D9A2B28-6F1D-4CDB-9DEA-054F2DF9DEB3}
+		{718369DB-DDA0-416D-8383-D82C7412AE57} = {5D9A2B28-6F1D-4CDB-9DEA-054F2DF9DEB3}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{718369DB-DDA0-416D-8383-D82C7412AE57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{718369DB-DDA0-416D-8383-D82C7412AE57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{718369DB-DDA0-416D-8383-D82C7412AE57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{718369DB-DDA0-416D-8383-D82C7412AE57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
