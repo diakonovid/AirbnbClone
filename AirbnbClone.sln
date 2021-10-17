@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{423925DE-6BB7-46EF-912E-91E0A823FF51}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5D9A2B28-6F1D-4CDB-9DEA-054F2DF9DEB3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ui", "ui", "{B4F1FA02-FBF7-418C-A97F-755E0DFFB524}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "api", "api", "{C9A5B02A-7208-4024-8BEE-C11F9A0E584B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B4F1FA02-FBF7-418C-A97F-755E0DFFB524} = {5D9A2B28-6F1D-4CDB-9DEA-054F2DF9DEB3}
+		{C9A5B02A-7208-4024-8BEE-C11F9A0E584B} = {5D9A2B28-6F1D-4CDB-9DEA-054F2DF9DEB3}
+	EndGlobalSection
+EndGlobal
