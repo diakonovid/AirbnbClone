@@ -2,6 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AirbnbClone.API.Middleware;
+using AirbnbClone.Domain.Interfaces;
+using AirbnbClone.Infrastructure.Repositories;
+using CorrelationId;
+using CorrelationId.DependencyInjection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -11,6 +16,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using MongoDB.Driver;
 
 namespace AirbnbClone.API
 {
@@ -31,6 +37,9 @@ namespace AirbnbClone.API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "AirbnbClone.API", Version = "v1" });
             });
+            
+            RegisterMongoDbRepositories(services);
+            services.AddDefaultCorrelationId();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,13 +52,27 @@ namespace AirbnbClone.API
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "AirbnbClone.API v1"));
             }
 
+            app.UseCorrelationId();
+            
             app.UseHttpsRedirection();
 
             app.UseRouting();
 
             app.UseAuthorization();
 
+            app.UseMiddleware<LoggingMiddleware>();
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
+        }
+        
+        public void RegisterMongoDbRepositories(IServiceCollection servicesBuilder)
+        {
+            servicesBuilder.AddSingleton<IMongoClient, MongoClient>(s =>
+            {
+                var uri = s.GetRequiredService<IConfiguration>()["MongoUri"];
+                return new MongoClient(uri);
+            });
+            
+            servicesBuilder.AddSingleton<IPlaceRepository, PlacesRepository>();
         }
     }
 }

@@ -6,6 +6,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5D9A2B28-6F1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirbnbClone.API", "src\AirbnbClone.API\AirbnbClone.API.csproj", "{718369DB-DDA0-416D-8383-D82C7412AE57}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirbnbClone.Domain", "src\AirbnbClone.Domain\AirbnbClone.Domain.csproj", "{76FAFEC5-8E16-4BAB-AA1F-535BA5533625}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirbnbClone.Infrastructure", "src\AirbnbClone.Infrastructure\AirbnbClone.Infrastructure.csproj", "{ECF124BA-4D52-4A32-B8C2-77F3D61C855E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirbnbClone.IntegrationTests", "tests\AirbnbClone.IntegrationTests\AirbnbClone.IntegrationTests.csproj", "{22E059DF-1202-48E6-A158-BD5E7A1CD006}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,11 +19,26 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{718369DB-DDA0-416D-8383-D82C7412AE57} = {5D9A2B28-6F1D-4CDB-9DEA-054F2DF9DEB3}
+		{76FAFEC5-8E16-4BAB-AA1F-535BA5533625} = {5D9A2B28-6F1D-4CDB-9DEA-054F2DF9DEB3}
+		{ECF124BA-4D52-4A32-B8C2-77F3D61C855E} = {5D9A2B28-6F1D-4CDB-9DEA-054F2DF9DEB3}
+		{22E059DF-1202-48E6-A158-BD5E7A1CD006} = {423925DE-6BB7-46EF-912E-91E0A823FF51}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{718369DB-DDA0-416D-8383-D82C7412AE57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{718369DB-DDA0-416D-8383-D82C7412AE57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{718369DB-DDA0-416D-8383-D82C7412AE57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{718369DB-DDA0-416D-8383-D82C7412AE57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76FAFEC5-8E16-4BAB-AA1F-535BA5533625}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76FAFEC5-8E16-4BAB-AA1F-535BA5533625}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76FAFEC5-8E16-4BAB-AA1F-535BA5533625}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76FAFEC5-8E16-4BAB-AA1F-535BA5533625}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECF124BA-4D52-4A32-B8C2-77F3D61C855E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECF124BA-4D52-4A32-B8C2-77F3D61C855E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECF124BA-4D52-4A32-B8C2-77F3D61C855E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECF124BA-4D52-4A32-B8C2-77F3D61C855E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22E059DF-1202-48E6-A158-BD5E7A1CD006}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22E059DF-1202-48E6-A158-BD5E7A1CD006}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22E059DF-1202-48E6-A158-BD5E7A1CD006}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22E059DF-1202-48E6-A158-BD5E7A1CD006}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
